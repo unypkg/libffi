@@ -44,6 +44,10 @@ echo "newer" >release-"$pkgname"
 check_for_repo_and_create
 git_clone_source_repo
 
+cd libffi || exit
+./autogen.sh
+cd /uny/sources || exit
+
 archiving_source
 
 ######################################################################################################################
